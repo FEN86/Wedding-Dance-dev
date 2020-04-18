@@ -1,0 +1,11 @@
+// User variables:
+$accent: #FF699F;
+$bg: #1F1F1F;
+$text: #000;
+
+
+@mixin bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
