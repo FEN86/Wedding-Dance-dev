@@ -33,6 +33,29 @@
       font-size: 21px;
     }
   }
+  .slider-card {
+    &__body {
+      padding: 43px 23px;
+    }
+  }
+  .slider-card {
+    &__body {
+      padding: 43px 23px;
+    }
+    &__num {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 700;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__item {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 }
 @media (max-width: 1024px) {  
   .header-content {
@@ -53,7 +76,7 @@
     }
   }
   .card {
-    &__figure {
+    &__header {
       min-height: 300px;
     }
     &__body {
@@ -97,13 +120,91 @@
       font-size: 14px;
     }
   }
+  .copyright {
+    font-size: 14px;
+  }
+  .coaches__text {
+    margin-bottom: 0;
+  }
+  .slider-card {
+    &__figure {
+      overflow: hidden;
+      max-width: 100%;
+      min-width: 240px;
+      width: auto;
+      min-height: 340px;
+      height: auto;
+      position: relative;
+    }
+    &__body {
+      padding: 16px 23px 50px;
+      position: relative;
+    }
+    &__num {
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 9px;
+    }
+    &__title {
+      margin-bottom: 4px;
+    }
+    &__subtitle {
+      font-size: 13px;
+      line-height: 21px;
+      margin-bottom: 16px;
+    }
+    &__list {
+      margin-bottom: 0;
+    }
+    &__item {
+      font-size: 13px;
+      line-height: 21px;
+      margin-bottom: 8px;
+      span {
+        display: block;
+      }
+    }
+  }
+  .slider-card__btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 0;
+    line-height: 0;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    padding: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-image: url(../images/angle-right.svg);
+      transform: translate(-50%, -50%);
+      @include bg;
+      width: 9px;
+      height: 15px;
+      border-radius: 50%;
+    }
+    &:hover {
+      background-color: rgba($color: $accent, $alpha: 0.5)
+    }
+  }
 }
 @media (max-width: 900px) {
   .header,
-  .offers,
-  .services,
-  .coaches {
+  .offers {
     margin-bottom: 56px;
+  }
+  .services {
+    margin-bottom: 20px;
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+  .coaches {
+    margin-bottom: 20px;
   }
   .header {
     &__top {
@@ -125,6 +226,7 @@
     }
   }
   .main-nav {
+    display: block;
     position: absolute;
     top: 0;
     left: -15px;
@@ -133,32 +235,15 @@
     height: 100vh;
     padding: 40px 24px;
     background-color: #fff;
+    background-image: url(../images/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
     z-index: 1;
     transition: all .5s;
     transform: translateX(-100%);
     overflow: hidden;
-    &::before {
-      content: 'MENU';
-      position: absolute;      
-      font-size: 250px;
-      line-height: 175px;
-      font-weight: 900;
-      font-family: 'Montserrat', sans-serif;
-      color: #FEF2F6;
-      transform: rotate(90deg);
-      top: 290px;
-      right: -325px;
-      text-transform: uppercase;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background-color: $accent;
-    }
+    border-bottom: 4px solid $accent;
     &.active {
       transform: translateX(0);
     }
@@ -172,6 +257,9 @@
       display: block;
       position: relative;
       z-index: 1;
+      &--mod {
+        margin-right: 0;
+      }
     }
     &__item {
       margin: 0 0 40px;
@@ -192,23 +280,32 @@
       &:hover::after {
         width: 100%;
       }
+    }    
+  }
+  .transformer-btn {
+    position: relative;
+    z-index: 1;
+    &__span {
+      &--mobile {
+        display: block;
+      }
+      &--desktop {
+        display: none;
+      }
     }
-    &--mod {
-      margin-left: 0;
-      margin-right: 0;
+    &--mobile {
+      border-color: $accent;
+      color: $accent;
+      padding: 11px 40px 10px;
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
     }
   }
   .burger-menu {
     display: flex;
-  }
-  .header__btn {
-    display: none;
-  }
-  .main-nav__btn {
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
+  }  
   .close-btn {
     display: block;
     height: 20px;
@@ -247,6 +344,64 @@
       width: calc(33.333% - 30px);
     }
   }
+  .services__list {
+    .slick-track{
+      margin-bottom: 56px;
+    }
+  }
+  .slider-card {
+    &__inner {
+      flex-direction: column;
+    }
+    &__figure {
+      width: 100%;
+      min-height: 340px;
+    }
+    &__body {
+      padding: 16px 23px 32px;
+    }
+    &__list {
+      max-width: 210px;
+    }
+  }
+  .slider-cards .slick-dots,
+  .coaches-slider .slick-dots {
+    display: flex;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+  }
+  .slider-cards .slick-dots li,
+  .coaches-slider .slick-dots li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & + li {
+      margin-left: 4px;
+    }
+  }
+  .slider-cards .slick-dots button,
+  .coaches-slider .slick-dots button {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .slider-cards .slick-dots .slick-active button,
+  .coaches-slider .slick-dots .slick-active button {
+    background-color: $accent;
+    border: none;
+  }
+  .counter {
+    display: none;
+  }
 }
 @media (max-width: 650px) {
   .offers {
@@ -262,42 +417,19 @@
       max-width: 100%;
     }
   }
-}
-@media (max-width: 580px) {
-  .header {
-    &__img {
-      min-height: 300px;
-    }
-  }
-}
-@media (max-width: 414px) {
   .header {
     &__img {
       min-height: 275px;
     }
   }
-  .copyright {
-    font-size: 14px;
-  }
-}
-@media (max-width: 375px) {
-  .main-nav {
-    &::before {
-      top: 280px;
-    }
-  }
-}
-@media (max-width: 320px) {
-  .main-nav {
-    &::before {
-      font-size: 198px;
-      top: 205px;
-      right: -255px;
-    }
-  }
   .card {
+    &__header {
+      min-height: 280px;
+    }
+  }
+  .slider-card {
     &__figure {
       min-height: 280px;
     }
-  }   
+  }
 }
