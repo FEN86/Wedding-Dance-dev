@@ -176,19 +176,18 @@
     border-radius: 50%;
     padding: 0;
     &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background-image: url(../images/angle-right.svg);
-      transform: translate(-50%, -50%);
-      @include bg;
-      width: 9px;
-      height: 15px;
+      content: '\E009';
+      font-size: 20px;
+      line-height: 0.8;
+      font-family: "icons";
       border-radius: 50%;
+      color: $accent;
     }
     &:hover {
-      background-color: rgba($color: $accent, $alpha: 0.5)
+      background-color: $accent;
+    }
+    &:hover::after {
+      color: #fff;
     }
   }
 }

@@ -311,7 +311,7 @@
     border: none;
     cursor: pointer;
     &::before {
-      content: '';
+      content: '\E00A';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -319,6 +319,9 @@
       width: 40px;
       height: 28px;
       display: block;
+      font-size: 28px;
+      line-height: 1;
+      font-family: "icons";
     }
     &.slick-disabled {
       &::before {
@@ -328,14 +331,11 @@
   }
   .slick-next {
     left: calc(50% + 80px);
-    &::before {
-      background-image: url(../images/next-arrow.svg);
-    }
   }
   .slick-prev {
     left: calc(50% - 80px);
     &::before {
-      background-image: url(../images/prev-arrow.svg);
+      transform: translate(-50%, -50%) rotate(180deg);
     }
   }
 }
