@@ -1,5 +1,5 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:after,
@@ -8,22 +8,22 @@ html {
 }
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 body {
-	font-size: 16px;
+  font-size: 16px;
   // font-family: 'Roboto', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   line-height: 24px;
   background-color: #fff;
 }
 a {
-	display: inline-block;
+  display: inline-block;
   text-decoration: none;
   color: $text;
 }
-ul {  
+ul {
   list-style: none;
 }
 img {
@@ -41,38 +41,38 @@ img {
   height: 100%;
 }
 .clearfix:after {
-	content: '';
-	display: block;
-	clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-} 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
   overflow: hidden;
   min-width: 320px;
 }
 .content {
-	flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 .footer {
-	flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 .container {
   max-width: 1326px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-  padding-right: 15px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }

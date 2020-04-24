@@ -57,7 +57,7 @@
     }
   }
 }
-@media (max-width: 1024px) {  
+@media (max-width: 1024px) {
   .header-content {
     padding: 53px 37px 50px 0;
     &__title {
@@ -89,7 +89,7 @@
   .title {
     &--h2 {
       font-size: 24px;
-      margin-bottom: 12px;      
+      margin-bottom: 12px;
     }
     &--h3 {
       font-size: 18px;
@@ -176,7 +176,7 @@
     border-radius: 50%;
     padding: 0;
     &::after {
-      content: '\E009';
+      content: "\E009";
       font-size: 20px;
       line-height: 0.8;
       font-family: "icons";
@@ -192,6 +192,9 @@
   }
 }
 @media (max-width: 900px) {
+  .lock {
+    overflow: hidden;
+  }
   .header,
   .offers {
     margin-bottom: 56px;
@@ -215,7 +218,7 @@
     &__img {
       min-height: 400px;
     }
-  } 
+  }
   .header-content {
     max-width: 100%;
     order: 1;
@@ -239,7 +242,7 @@
     background-position: center right;
     background-size: contain;
     z-index: 1;
-    transition: all .5s;
+    transition: all 0.5s;
     transform: translateX(-100%);
     overflow: hidden;
     border-bottom: 4px solid $accent;
@@ -264,13 +267,13 @@
       margin: 0 0 40px;
       &:last-child {
         margin-bottom: 56px;
-      }      
+      }
     }
     &__link {
       font-size: 24px;
       line-height: 28px;
       font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       &::after {
         width: 0px;
         height: 2px;
@@ -279,7 +282,7 @@
       &:hover::after {
         width: 100%;
       }
-    }    
+    }
   }
   .transformer-btn {
     position: relative;
@@ -304,7 +307,7 @@
   }
   .burger-menu {
     display: flex;
-  }  
+  }
   .close-btn {
     display: block;
     height: 20px;
@@ -318,7 +321,7 @@
     z-index: 1;
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
@@ -326,7 +329,7 @@
       margin-left: -12px;
       height: 2px;
       width: 24px;
-      background-color: $bg;       
+      background-color: $bg;
     }
     &::before {
       transform: rotate(45deg);
@@ -344,7 +347,7 @@
     }
   }
   .services__list {
-    .slick-track{
+    .slick-track {
       margin-bottom: 56px;
     }
   }
