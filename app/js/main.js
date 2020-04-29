@@ -142,4 +142,12 @@
   function updateCounter(slick) {
     $(".counter").text(getCurrSlide(slick) + " of " + getNumOfSlides(slick));
   }
+
+  wow = new WOW(
+    {
+      mobile: false
+    }
+  )
+  wow.init();
+
 })(jQuery);

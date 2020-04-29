@@ -37,7 +37,8 @@ gulp.task('sass', function () {
 gulp.task('css-libs', function () {
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.css',
-    'node_modules/reset-css/reset.css'
+    'node_modules/reset-css/reset.css',
+    'node_modules/wow.js/css/libs/animate.css'
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -57,7 +58,8 @@ gulp.task('js', function () {
 // Scripts & JS Libraries
 gulp.task('script', function () {
   return gulp.src([
-    'node_modules/slick-carousel/slick/slick.min.js'
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/wow.js/dist/wow.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

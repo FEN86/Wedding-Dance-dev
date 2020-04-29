@@ -242,7 +242,7 @@
     background-position: center right;
     background-size: contain;
     z-index: 1;
-    transition: all 0.5s;
+    transition: transform 0.5s;
     transform: translateX(-100%);
     overflow: hidden;
     border-bottom: 4px solid $accent;
@@ -277,7 +277,7 @@
       &::after {
         width: 0px;
         height: 2px;
-        transform: scale(1);
+        transition: width .3s;
       }
       &:hover::after {
         width: 100%;
