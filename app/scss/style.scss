@@ -5,14 +5,26 @@
 @import "global";
 
 .header {
-  margin-bottom: 100px;
-  &__top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  &__inner {
     height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__bottom {
+  &--shadow {
+      box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  }
+}
+.banner {
+  margin-top: 72px;
+  margin-bottom: 100px;
+  &__inner {
     display: flex;
     justify-content: space-between;
   }
@@ -25,15 +37,10 @@
     height: auto;
     width: 100%;
   }
-}
-.logo {
-  height: 19px;
-  max-width: 153px;
-  flex: none;
-}
-.header-content {
-  max-width: 460px;
-  padding: 73px 77px 80px 0;
+  &__content {
+    max-width: 460px;
+    padding: 73px 77px 80px 0;
+  }
   &__title {
     font-weight: 700;
     font-size: 72px;
@@ -51,6 +58,12 @@
     margin-bottom: 40px;
   }
 }
+.logo {
+  height: 19px;
+  max-width: 153px;
+  flex: none;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;

@@ -1,9 +1,11 @@
 @media (max-width: 1200px) {
-  .header-content {
-    padding: 53px 37px 50px 0;
+  .banner {
+    &__content {
+      padding: 53px 37px 50px 0;
+    }
     &__title {
       font-size: 54px;
-      font-size: 56px;
+      line-height: 60px;
     }
     &__subtitle {
       font-size: 18px;
@@ -58,11 +60,13 @@
   }
 }
 @media (max-width: 1024px) {
-  .header-content {
-    padding: 53px 37px 50px 0;
+  .banner {
+    &__content {
+      padding: 53px 37px 50px 0;
+    }
     &__title {
       font-size: 36px;
-      font-size: 38px;
+      line-height: 40px;
       margin-bottom: 11px;
     }
     &__subtitle {
@@ -192,10 +196,15 @@
   }
 }
 @media (max-width: 900px) {
+  .header {
+    &__inner {
+      height: 57px;
+    }
+  }  
   .lock {
     overflow: hidden;
   }
-  .header,
+  .banner,
   .offers {
     margin-bottom: 56px;
   }
@@ -208,32 +217,29 @@
   .coaches {
     margin-bottom: 20px;
   }
-  .header {
-    &__top {
-      position: relative;
-    }
-    &__bottom {
-      flex-direction: column;
-    }
+  .banner {
+    margin-top: 57px;
+    &__inner {
+      flex-direction: column;  
+    }      
     &__img {
       min-height: 400px;
     }
-  }
-  .header-content {
-    max-width: 100%;
-    order: 1;
-    padding: 30px 59px 50px 0;
+    &__content {
+      max-width: 100%;
+      order: 1;
+      padding: 30px 59px 50px 0;    
+    }
     &__title {
       max-width: 100%;
     }
-  }
+  }  
   .main-nav {
     display: block;
     position: absolute;
     top: 0;
-    left: -15px;
-    right: -15px;
-    width: 100vw;
+    left: 0;
+    right: 0;
     height: 100vh;
     padding: 40px 24px;
     background-color: #fff;
@@ -406,6 +412,9 @@
   }
 }
 @media (max-width: 650px) {
+  .text {
+    padding-right: 0;
+  }
   .offers {
     &__list {
       margin: 0 -10px;
@@ -419,9 +428,12 @@
       max-width: 100%;
     }
   }
-  .header {
+  .banner {
     &__img {
-      min-height: 275px;
+      min-height: 280px;
+    }
+    &__content {
+      padding: 30px 59px 50px 0;
     }
   }
   .card {
