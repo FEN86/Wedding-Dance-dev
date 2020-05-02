@@ -13,7 +13,7 @@
   });
 
   // Buttons
-  $(".burger-menu").on("click", function () {
+  $(".burger-btn").on("click", function () {
     $(".main-nav").addClass("active");
     $("body").addClass("lock");
   });
